@@ -1,0 +1,23 @@
+<html>
+<script src="angular.min.js">
+</script>
+<body>
+<div ng-app="" ng-init="names=[
+{firstName:'sahil',lastName:'kaushik'},
+{firstName:'rahul',lastName:'sharma'},
+{firstName:'rohit',lastName:'nagpal'},
+{lastName:'kapoor',firstName:'karan'},
+{fullName:'sumit gujjar', nickName:'samy'}
+]">
+<ul>
+<li ng-repeat="x in names">
+
+
+{{x.nickName}}
+
+{{x.firstName}}
+</li>
+</ul>
+</div>
+</body>
+</html>

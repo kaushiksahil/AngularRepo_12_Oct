@@ -1,0 +1,23 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+First Number<br><input type="number" ng-model="firstNumber"><br>
+Second Number<br><input type="number" ng-model="secondNumber"><br>
+<h4>Sum is: {{sum()}}
+</div>
+
+<script>
+var app=angular.module('myApp',[]);
+app.controller('myCtrl',function($scope){
+
+$scope.firstNumber="";
+$scope.secondNumber="";
+$scope.sum=function() {
+return $scope.firstNumber + $scope.secondNumber;
+}
+});
+</script>
+
+</body>
+</html>

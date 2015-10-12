@@ -1,0 +1,35 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="ctrl" ng-init="names=[
+{Name:'Sahil',Branch:'CSE'},
+{Name:'Gagandeep Sharma',Branch:'ME'},
+{Name:'Amit',Branch:'CE'},
+{Name:'Yash',Branch:'ECE'}
+]">
+First Name<br><input type="text" ng-model="firstName"><br>
+Last Name<br><input type="text" ng-model="lastName"<br>
+<p ng-bind=fullName()></p>
+<table>
+<tr ng-repeat="studentName in names | orderBy:'Name'">
+<td>{{ $index + 1 }}</td>
+<td ng-if="$odd" style="background-color:#f1f1f1">{{studentName.Name | uppercase}}</td>
+<td ng-if="$even">{{studentName.Name | uppercase}}</td>
+<td ng-if="$odd" style="background-color:#f1f1f1">{{studentName.Branch | lowercase}}</td>
+<td ng-if="$even">{{studentName.Branch | lowercase}}</td>
+</tr>
+</table>
+</div>
+
+<script>
+var app=angular.module('myApp',[]);
+app.controller('ctrl',function($scope){
+$scope.firstName="";
+$scope.lastName="";
+$scope.fullName=function(){
+return $scope.firstName+" "+$scope.lastName;
+}
+});
+</script>
+</body>
+</html>

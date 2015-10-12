@@ -1,0 +1,19 @@
+<html>
+<script src="angular.min.js"</script>
+<body>
+<div ng-app="" ng-init="products=[
+{productName:'Phone',Price:'$400'},
+{productName:'Laptop',Price:'$300'},
+{productName:'Jean',Price:'$40'},
+{productName:'Shoes',Price:'$30'},
+{productName:'T-Shirt', Price:'$5'}
+]">
+<ul>
+<li ng-repeat="x in products">
+{{x.productName}}-{{x.Price}}
+<br>
+</li>
+</ul>
+</div>
+</body>
+</html>

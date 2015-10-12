@@ -1,0 +1,24 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+<ul>
+<li ng-repeat="product in products">
+{{product.productName}}-{{product.Price}}
+</li>
+</ul>
+</div>
+<script>
+var app=angular.module('myApp',[])
+app.controller('myCtrl',function($scope){
+$scope.products=[
+{productName:'Phone',Price:'$400'},
+{productName:'Laptop',Price:'$300'},
+{productName:'Jean',Price:'$40'},
+{productName:'Shoes',Price:'$30'},
+{productName:'T-Shirt', Price:'$5'}
+];
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<div ng-app="" ng-init="mySwitch=true">
+<p>
+<button ng-disabled="mySwitch">Click Me!</button>
+</p>
+<p>
+<input type="text" ng-model="mySwitch">Button</p>
+
+<p ng-show="true">I am visible</p>
+<p ng-show="false"> I am not visible</p>
+<p ng-show="mySwitch=false">I am visible.</p>
+</div>
+</body>
+</html>

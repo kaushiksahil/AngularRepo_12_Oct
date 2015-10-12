@@ -1,0 +1,20 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<h4>This is Angular App</h4>
+<div ng-app="myApp" ng-controller="myCtrl">
+First Name: <input type="number" ng-model="firstName">
+Last Name: <input type="number" ng-model="lastName">
+full Name: {{firstName+lastName}}
+</div>
+
+<script>
+var kaka=angular.module('myApp',[]);
+kaka.controller('myCtrl' ,function($scope){
+$scope.firstName="";
+$scope.lastName="";
+});
+</script>
+
+</body>
+</html>

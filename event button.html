@@ -1,0 +1,16 @@
+<html>
+<script src="angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="ctrl">
+<button ng-click="count=count+2">Click Me!</button>
+{{count}}
+</div>
+<script>
+var app=angular.module("myApp",[]);
+app.controller('ctrl',function($scope){
+$scope.count=0;
+
+});
+</script>
+</body>
+</html>
